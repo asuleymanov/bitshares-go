@@ -13,8 +13,9 @@ type Transaction struct {
 	RefBlockPrefix types.UInt32 `json:"ref_block_prefix"`
 	Expiration     *types.Time  `json:"expiration"`
 	//Operations     Operations   `json:"operations"`
-	Signatures     []string     `json:"signatures"`
+	Signatures []string `json:"signatures"`
 }
+
 /*
 // MarshalTransaction implements transaction.Marshaller interface.
 func (tx *Transaction) MarshalTransaction(encoder *transaction.Encoder) error {

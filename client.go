@@ -25,8 +25,8 @@ type Client struct {
 	API *api.API
 
 	Config api.Config
-  
-  ChainID string
+
+	ChainID string
 	// Current keys for operations
 	//CurrentKeys *Keys
 }
@@ -61,24 +61,24 @@ func NewClient(apiURL string) (*Client, error) {
 	client.asyncProtocol = false
 
 	client.API = api.NewAPI(client.cc)
-  
-  err=client.API.SetAPIID();
-  if err!=nil{
-    return nil, err
-  }
-  
+
+	err = client.API.SetAPIID()
+	if err != nil {
+		return nil, err
+	}
+
 	conf, err := client.API.GetConfig()
 	if err != nil {
 		return nil, err
 	}
 	client.Config = *conf
 
-  cid,err := client.API.GetChainID()
-  if err != nil {
+	cid, err := client.API.GetChainID()
+	if err != nil {
 		return nil, err
 	}
 	client.ChainID = *cid
-  
+
 	return client, nil
 }
 

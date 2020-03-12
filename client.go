@@ -24,10 +24,11 @@ type Client struct {
 
 	API *api.API
 
-	//Config api.Config
-
+	Config api.Config
+  
+  ChainID string
 	// Current keys for operations
-	CurrentKeys *Keys
+	//CurrentKeys *Keys
 }
 
 // NewClient creates a new RPC client that use the given CallCloser internally.
@@ -65,12 +66,19 @@ func NewClient(apiURL string) (*Client, error) {
   if err!=nil{
     return nil, err
   }
-	/*conf, err := client.API.GetConfig()
+  
+	conf, err := client.API.GetConfig()
 	if err != nil {
 		return nil, err
 	}
-	client.Config = *conf*/
+	client.Config = *conf
 
+  cid,err := client.API.GetChainID()
+  if err != nil {
+		return nil, err
+	}
+	client.ChainID = *cid
+  
 	return client, nil
 }
 

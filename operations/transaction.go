@@ -12,10 +12,10 @@ type Transaction struct {
 	RefBlockNum    types.UInt16 `json:"ref_block_num"`
 	RefBlockPrefix types.UInt32 `json:"ref_block_prefix"`
 	Expiration     *types.Time  `json:"expiration"`
-	Operations     Operations   `json:"operations"`
+	//Operations     Operations   `json:"operations"`
 	Signatures     []string     `json:"signatures"`
 }
-
+/*
 // MarshalTransaction implements transaction.Marshaller interface.
 func (tx *Transaction) MarshalTransaction(encoder *transaction.Encoder) error {
 	if len(tx.Operations) == 0 {
@@ -43,3 +43,4 @@ func (tx *Transaction) MarshalTransaction(encoder *transaction.Encoder) error {
 func (tx *Transaction) PushOperation(op Operation) {
 	tx.Operations = append(tx.Operations, op)
 }
+*/

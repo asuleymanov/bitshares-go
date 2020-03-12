@@ -32,20 +32,6 @@ func main() {
 
   fmt.Println("Config --> ")
   fmt.Printf("%#v \n",cls.Config)
-  fmt.Println("")
-  fmt.Println("")
-  
-  fmt.Println("DatabaseInfo --> ")
-  ans,err:= cls.API.GetDatabaseInfo()
-  fmt.Printf("%#v \n Error : %s\n",ans,err)
-  fmt.Println("")
-  fmt.Println("")
-  
-  fmt.Println("ChainProperties --> ")
-  ans1,err1:= cls.API.GetChainProperties()
-  fmt.Printf("%#v \n Error : %s\n",ans1,err1)
-  fmt.Println("")
-  fmt.Println("")
 }
 ```
 

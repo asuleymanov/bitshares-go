@@ -1,7 +1,7 @@
 package operations
 
 import (
-	"github.com/asuleymanov/golos-go/encoding/transaction"
+	"github.com/asuleymanov/bitshares-go/encoding/transaction"
 )
 
 //ProveAuthorityOperation represents prove_authority operation data.

@@ -1,7 +1,7 @@
 package operations
 
 import (
-	"github.com/asuleymanov/golos-go/encoding/transaction"
+	"github.com/asuleymanov/bitshares-go/encoding/transaction"
 )
 
 //BreakFreeReferralOperation represents break_free_referral operation data.

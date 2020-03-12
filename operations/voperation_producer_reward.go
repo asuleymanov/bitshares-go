@@ -1,7 +1,7 @@
 package operations
 
 import (
-	"github.com/asuleymanov/golos-go/types"
+	"github.com/asuleymanov/bitshares-go/types"
 )
 
 //ProducerRewardOperationOperation represents producer_reward operation data.

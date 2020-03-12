@@ -3,7 +3,7 @@ package api
 import (
 	"encoding/json"
 
-	"github.com/asuleymanov/golos-go/transports"
+	"github.com/asuleymanov/bitshares-go/transports"
 )
 
 //API plug-in structure
@@ -20,7 +20,7 @@ func NewAPI(caller transports.Caller) *API {
 	return &API{caller}
 }
 
-func (api *API) call(apiID string, method string, params, resp interface{}) error {
+func (api *API) call(apiID uint8, method string, params, resp interface{}) error {
 	return api.caller.Call("call", []interface{}{apiID, method, params}, resp)
 }
 

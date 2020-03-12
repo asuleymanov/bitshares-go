@@ -1,7 +1,7 @@
 package operations
 
 import (
-	"github.com/asuleymanov/golos-go/encoding/transaction"
+	"github.com/asuleymanov/bitshares-go/encoding/transaction"
 )
 
 //DeclineVotingRightsOperation represents decline_voting_rights operation data.

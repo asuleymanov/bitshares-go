@@ -1,7 +1,7 @@
 package operations
 
 import (
-	"github.com/asuleymanov/golos-go/encoding/transaction"
+	"github.com/asuleymanov/bitshares-go/encoding/transaction"
 )
 
 //RejectVestingSharesDelegationOperation represents reject_vesting_shares_delegation operation data.

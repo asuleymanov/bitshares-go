@@ -1,8 +1,8 @@
 package api
 
 import (
-	"github.com/asuleymanov/golos-go/operations"
-	"github.com/asuleymanov/golos-go/types"
+	"github.com/asuleymanov/bitshares-go/operations"
+	"github.com/asuleymanov/bitshares-go/types"
 )
 
 //Bandwidth structure for the GetAccountBandwidth function

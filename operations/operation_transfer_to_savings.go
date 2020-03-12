@@ -1,8 +1,8 @@
 package operations
 
 import (
-	"github.com/asuleymanov/golos-go/encoding/transaction"
-	"github.com/asuleymanov/golos-go/types"
+	"github.com/asuleymanov/bitshares-go/encoding/transaction"
+	"github.com/asuleymanov/bitshares-go/types"
 )
 
 //TransferToSavingsOperation represents transfer_to_savings operation data.

@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/asuleymanov/golos-go/encoding/transaction"
+	"github.com/asuleymanov/bitshares-go/encoding/transaction"
 )
 
 //Asset type from parameter JSON

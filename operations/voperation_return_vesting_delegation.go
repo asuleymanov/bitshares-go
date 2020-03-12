@@ -1,7 +1,7 @@
 package operations
 
 import (
-	"github.com/asuleymanov/golos-go/types"
+	"github.com/asuleymanov/bitshares-go/types"
 )
 
 //ReturnVestingDelegationOperation represents return_vesting_delegation operation data.

@@ -9,7 +9,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/asuleymanov/golos-go/encoding/transaction"
+	"github.com/asuleymanov/bitshares-go/encoding/transaction"
 )
 
 var (

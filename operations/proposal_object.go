@@ -3,7 +3,7 @@ package operations
 import (
 	"encoding/json"
 
-	"github.com/asuleymanov/golos-go/encoding/transaction"
+	"github.com/asuleymanov/bitshares-go/encoding/transaction"
 )
 
 //ProposalObjects array of values of type ProposalObject.

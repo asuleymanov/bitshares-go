@@ -1,13 +1,13 @@
-package golos
+package bitshares
 
 import (
 	"errors"
 	"net/url"
 
-	"github.com/asuleymanov/golos-go/api"
-	"github.com/asuleymanov/golos-go/transports"
-	"github.com/asuleymanov/golos-go/transports/http"
-	"github.com/asuleymanov/golos-go/transports/websocket"
+	"github.com/asuleymanov/bitshares-go/api"
+	"github.com/asuleymanov/bitshares-go/transports"
+	"github.com/asuleymanov/bitshares-go/transports/http"
+	"github.com/asuleymanov/bitshares-go/transports/websocket"
 )
 
 var (
@@ -24,7 +24,7 @@ type Client struct {
 
 	API *api.API
 
-	Config api.Config
+	//Config api.Config
 
 	// Current keys for operations
 	CurrentKeys *Keys
@@ -61,11 +61,11 @@ func NewClient(apiURL string) (*Client, error) {
 
 	client.API = api.NewAPI(client.cc)
 
-	conf, err := client.API.GetConfig()
+	/*conf, err := client.API.GetConfig()
 	if err != nil {
 		return nil, err
 	}
-	client.Config = *conf
+	client.Config = *conf*/
 
 	return client, nil
 }

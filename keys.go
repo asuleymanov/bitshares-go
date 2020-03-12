@@ -1,10 +1,10 @@
-package golos
+package bitshares
 
 import (
 	"errors"
 
-	"github.com/asuleymanov/golos-go/encoding/wif"
-	"github.com/asuleymanov/golos-go/operations"
+	"github.com/asuleymanov/bitshares-go/encoding/wif"
+	"github.com/asuleymanov/bitshares-go/operations"
 )
 
 var (

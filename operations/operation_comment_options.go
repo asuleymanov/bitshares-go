@@ -3,8 +3,8 @@ package operations
 import (
 	"encoding/json"
 
-	"github.com/asuleymanov/golos-go/encoding/transaction"
-	"github.com/asuleymanov/golos-go/types"
+	"github.com/asuleymanov/bitshares-go/encoding/transaction"
+	"github.com/asuleymanov/bitshares-go/types"
 )
 
 //CommentOptionsOperation represents comment_options operation data.

@@ -1,9 +1,9 @@
-package golos
+package bitshares
 
 import (
-	"github.com/asuleymanov/golos-go/operations"
-	"github.com/asuleymanov/golos-go/transactions"
-	"github.com/asuleymanov/golos-go/types"
+	"github.com/asuleymanov/bitshares-go/operations"
+	"github.com/asuleymanov/bitshares-go/transactions"
+	"github.com/asuleymanov/bitshares-go/types"
 )
 
 //SetAsyncProtocol enables or disables the asynchronous operation protocol

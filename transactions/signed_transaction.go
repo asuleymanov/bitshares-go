@@ -9,9 +9,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/asuleymanov/golos-go/encoding/transaction"
-	"github.com/asuleymanov/golos-go/operations"
-	"github.com/asuleymanov/golos-go/types"
+	"github.com/asuleymanov/bitshares-go/encoding/transaction"
+	"github.com/asuleymanov/bitshares-go/operations"
+	"github.com/asuleymanov/bitshares-go/types"
 )
 
 //SignedTransaction structure of a signed transaction

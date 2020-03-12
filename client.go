@@ -60,7 +60,11 @@ func NewClient(apiURL string) (*Client, error) {
 	client.asyncProtocol = false
 
 	client.API = api.NewAPI(client.cc)
-
+  
+  err=client.API.SetAPIID();
+  if err!=nil{
+    return nil, err
+  }
 	/*conf, err := client.API.GetConfig()
 	if err != nil {
 		return nil, err

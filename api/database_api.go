@@ -1,6 +1,10 @@
 package api
 
-//login_api
+import (
+	"encoding/json"
+)
+
+//database_api
 
 //GetConfig api request get_config
 func (api *API) GetConfig() (*Config, error) {
@@ -50,4 +54,37 @@ func (api *API) GetBlockHeaderBatch(blockNum ...uint32) ([]BlockHeaderBatch, err
 	var resp []BlockHeaderBatch
 	err := api.call(*api.DatabaseID, "get_block_header_batch", []interface{}{blockNum}, &resp)
 	return resp, err
+}
+
+//GetKeyReferences returns a list of accounts by a list of public keys
+func (api *API) GetKeyReferences(pubkey ...string) ([]*string, error) {
+	var resp []*string
+	err := api.call(*api.DatabaseID, "get_key_references", []interface{}{pubkey}, &resp)
+	return resp, err
+}
+
+//IsPublicKeyRegistered api request is_public_key_registered
+func (api *API) IsPublicKeyRegistered(pubkey string) (*bool, error) {
+	var resp bool
+	err := api.call(*api.DatabaseID, "is_public_key_registered", []interface{}{pubkey}, &resp)
+	return &resp, err
+}
+
+//GetAccountCount returns the number of registered users.
+func (api *API) GetAccountCount() (*uint64, error) {
+	var resp uint64
+	err := api.call(*api.DatabaseID, "get_account_count", EmptyParams, &resp)
+	return &resp, err
+}
+
+// Set callback to invoke as soon as a new block is applied
+func (api *API) SetBlockAppliedCallback(notice func(header *CallbackBlockResponse, error error)) (err error) {
+	err = api.setCallback(*api.DatabaseID, "set_block_applied_callback", func(raw json.RawMessage) {
+		var header CallbackBlockResponse
+		if err := json.Unmarshal(raw, &header); err != nil {
+			notice(nil, err)
+		}
+		notice(&header, nil)
+	})
+	return
 }

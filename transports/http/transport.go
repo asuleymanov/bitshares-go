@@ -87,7 +87,7 @@ func (caller *Transport) Call(method string, args []interface{}, reply interface
 	return nil
 }
 
-func (caller *Transport) SetCallback(api string, method string, notice func(args json.RawMessage)) error {
+func (caller *Transport) SetCallback(api uint8, method string, notice func(args json.RawMessage)) error {
 	panic("not supported")
 }
 

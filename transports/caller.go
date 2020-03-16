@@ -8,7 +8,7 @@ import (
 //Caller interface for sending a request to a network transport
 type Caller interface {
 	Call(method string, args []interface{}, reply interface{}) error
-	SetCallback(api string, method string, callback func(raw json.RawMessage)) error
+	SetCallback(api uint8, method string, callback func(raw json.RawMessage)) error
 }
 
 //CallCloser network transport interface

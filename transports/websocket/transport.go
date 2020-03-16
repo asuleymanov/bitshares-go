@@ -113,7 +113,7 @@ func (caller *Transport) Call(method string, args []interface{}, reply interface
 	return nil
 }
 
-func (caller *Transport) SetCallback(api string, method string, notice func(args json.RawMessage)) error {
+func (caller *Transport) SetCallback(api uint8, method string, notice func(args json.RawMessage)) error {
 	var ans map[string]interface{}
 	// increase callback id
 	caller.callbackMutex.Lock()
@@ -158,7 +158,7 @@ func (caller *Transport) input() {
 					}
 				} else {
 					log.Printf("protocol error: unknown message received: %+v\n", incoming)
-					log.Printf("Answer: %+v\n", string(message))
+					log.Printf("Answer: %#v\n", string(message))
 				}
 			}
 		}

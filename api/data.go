@@ -141,3 +141,17 @@ func (n *BlockHeaderBatch) UnmarshalJSON(buf []byte) error {
 	}
 	return nil
 }
+
+//BroadcastResponse structure for the BroadcastTransactionSynchronous function
+type BroadcastResponse struct {
+	ID       string `json:"id"`
+	BlockNum int32  `json:"block_num"`
+	TrxNum   int32  `json:"trx_num"`
+	Expired  bool   `json:"expired"`
+}
+
+//CallbackBlockResponse structure for the SetBlockAppliedCallback function
+type CallbackBlockResponse struct {
+	BlockNum   int           `json:"block_num"`
+	Operations []interface{} `json:"operations"`
+}

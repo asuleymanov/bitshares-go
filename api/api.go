@@ -43,7 +43,7 @@ func (api *API) call(apiID uint8, method string, params, resp interface{}) error
 	return api.caller.Call("call", []interface{}{apiID, method, params}, resp)
 }
 
-func (api *API) setCallback(apiID string, method string, callback func(raw json.RawMessage)) error {
+func (api *API) setCallback(apiID uint8, method string, callback func(raw json.RawMessage)) error {
 	return api.caller.SetCallback(apiID, method, callback)
 }
 

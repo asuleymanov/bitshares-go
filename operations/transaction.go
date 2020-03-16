@@ -1,9 +1,9 @@
 package operations
 
 import (
-	"errors"
+	_ "errors"
 
-	"github.com/asuleymanov/bitshares-go/encoding/transaction"
+	_ "github.com/asuleymanov/bitshares-go/encoding/transaction"
 	"github.com/asuleymanov/bitshares-go/types"
 )
 
